@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Moving : MonoBehaviour {
+public class Moving : MonoBehaviour 
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Update()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        transform.position += new Vector3(x, y) * Time.deltaTime;
+    }
 }
