@@ -3,14 +3,15 @@ using System.Collections;
 
 public class Moving : MonoBehaviour 
 {
-	public int playerNumber;
+    public PlayerEnum playerID;
+
 	public bool isController;
 	public float speed;
 
     void Update()
     {
-		float x = isController ? Input.GetAxis("Joy" + playerNumber + " Axis1") : Input.GetAxis("Horizontal");
-		float y = isController ? Input.GetAxis("Joy" + playerNumber + " Axis2") : Input.GetAxis("Vertical");
+        float x = isController ? Input.GetAxis("Joy" + (int)playerID + " Axis1") : Input.GetAxis("Horizontal");
+        float y = isController ? Input.GetAxis("Joy" + (int)playerID + " Axis2") : Input.GetAxis("Vertical");
 
 		/*
         transform.position += new Vector3(x, y) * Time.deltaTime;
@@ -22,8 +23,7 @@ public class Moving : MonoBehaviour
 
 			transform.eulerAngles = new Vector3(0,0,direction);
 		}
-
-
-		transform.position += new Vector3(x, y) * Time.deltaTime * speed;
+			
+        LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
     }
 }

@@ -62,6 +62,7 @@ GameObject:
   - 223: {fileID: 22394058}
   - 114: {fileID: 11442860}
   - 114: {fileID: 11485746}
+  - 114: {fileID: 11495230}
   m_Layer: 5
   m_Name: Percentages
   m_TagString: Untagged
@@ -189,6 +190,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11495230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0994af4f8e1f14f34abb0067de4341ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersCounters:
+  - {fileID: 11499762}
+  - {fileID: 11423114}
+  - {fileID: 11496908}
+  - {fileID: 11463350}
 --- !u!114 &11496908
 MonoBehaviour:
   m_ObjectHideFlags: 1
