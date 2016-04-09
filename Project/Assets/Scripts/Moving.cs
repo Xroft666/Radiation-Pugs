@@ -25,7 +25,5 @@ public class Moving : MonoBehaviour
 		}
 
 		transform.position += new Vector3(x, y) * Time.deltaTime * speed;
-			
-        LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
     }
 }
