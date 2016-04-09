@@ -15,6 +15,7 @@ public class Moving : MonoBehaviour
 		/*
         transform.position += new Vector3(x, y) * Time.deltaTime;
 */
+
 		if(Mathf.Abs(x) > 0.1f || Mathf.Abs(y) > 0.1f)
 		{
 			float direction = Mathf.Rad2Deg * Mathf.Atan2(-x,y);
@@ -23,6 +24,6 @@ public class Moving : MonoBehaviour
 		}
 
 
-		transform.position += transform.up * Time.deltaTime * speed;
+		transform.position += new Vector3(x, y) * Time.deltaTime * speed;
     }
 }
