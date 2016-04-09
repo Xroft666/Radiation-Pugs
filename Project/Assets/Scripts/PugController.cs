@@ -26,51 +26,67 @@ public class PugController : MonoBehaviour
 
     void Update()
     {
-		if(States.isStart && !States.won)
-		{
-			float x = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis1") : Input.GetAxis("Horizontal");
-			float y = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis2") : Input.GetAxis("Vertical");
+		if(!States.isStart || States.won)
+            return;
+		
+		float x = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis1") : Input.GetAxis("Horizontal");
+		float y = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis2") : Input.GetAxis("Vertical");
 		
 
-            Vector3 velocity = (new Vector3(x, y)).normalized;
-            
-            animator.SetFloat("speed", velocity.magnitude);
-            
-            
-            transform.position += velocity * speed * Time.deltaTime;
-            
-            if(x != 0f)
-                spriteRenderer.flipX = x < 0f ? false : true;
-            
-            if(y != 0f)
-                animator.SetBool("frontSide", y < 0f);
+        Vector3 velocity = (new Vector3(x, y)).normalized;
+        
+        animator.SetFloat("speed", velocity.magnitude);
+        
+        GridCell currentCell = LevelGrid.Instance.GetCell(transform.position.x, transform.position.y);
 
-		}
-
-        if(States.isStart && !States.won)
+        float modifier = 1f;
+        if(currentCell.owner == PlayerEnum.None)
         {
-            bool isPeeing = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Pee") : Input.GetKey(KeyCode.Z);
-            animator.SetBool("peeing", isPeeing);
-
-            if(isPeeing && amountOfPee > 0)
-            {
-                amountOfPee -= peeDepletionRate * Time.deltaTime;
-
-                LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, (PlayerEnum) playerID);
-            }
-            else if(isPeeing)
-            {
-                amountOfPee = 0;
-            }
-
-            if(drinking && amountOfPee < 100)
-            {
-                amountOfPee += peeAdditionRate * Time.deltaTime;
-            }
-            else if(drinking)
-            {
-                amountOfPee = 100;
-            }
+            
         }
+        else
+        if(currentCell.owner == playerID)
+        {
+            modifier = 2f;
+        }
+        else
+        {
+            modifier = 0.5f;
+        }
+
+        transform.position += velocity * modifier * speed * Time.deltaTime;
+
+
+
+        
+        if(x != 0f)
+            spriteRenderer.flipX = x < 0f ? false : true;
+        
+        if(y != 0f)
+            animator.SetBool("frontSide", y < 0f);
+
+        bool isPeeing = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Pee") : Input.GetKey(KeyCode.Z);
+        animator.SetBool("peeing", isPeeing);
+
+        if(isPeeing && amountOfPee > 0)
+        {
+            amountOfPee -= peeDepletionRate * Time.deltaTime;
+
+            LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, (PlayerEnum) playerID);
+        }
+        else if(isPeeing)
+        {
+            amountOfPee = 0;
+        }
+
+        if(drinking && amountOfPee < 100)
+        {
+            amountOfPee += peeAdditionRate * Time.deltaTime;
+        }
+        else if(drinking)
+        {
+            amountOfPee = 100;
+        }
+
     }
 }

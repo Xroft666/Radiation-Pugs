@@ -73,6 +73,12 @@ public class LevelGrid : MonoBehaviour
         cellCounter[PlayerEnum.Player4] = 0;
     }
 
+    public GridCell GetCell(float x, float y)
+    {
+        Point point = new Point((int) (x/scale), (int) (y/scale));
+        return m_grid[point];
+    }
+
     public void SetGridOwner(float x, float y, PlayerEnum id)
     {
         Point point = new Point((int) (x/scale), (int) (y/scale));
