@@ -8,6 +8,15 @@ public class Moving : MonoBehaviour
 	public bool isController;
 	public float speed;
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
 		float x = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis1") : Input.GetAxis("Horizontal");
@@ -15,7 +24,7 @@ public class Moving : MonoBehaviour
 
 		/*
         transform.position += new Vector3(x, y) * Time.deltaTime;
-*/
+
 
 		if(Mathf.Abs(x) > 0.1f || Mathf.Abs(y) > 0.1f)
 		{
@@ -23,7 +32,19 @@ public class Moving : MonoBehaviour
 
 			transform.eulerAngles = new Vector3(0,0,direction);
 		}
+*/
 
-		transform.position += new Vector3(x, y) * Time.deltaTime * speed;
+        Vector3 velocity = (new Vector3(x, y)).normalized;
+
+        animator.SetFloat("speed", velocity.magnitude);
+
+
+        transform.position += velocity * speed * Time.deltaTime;
+    
+        if(x != 0f)
+            spriteRenderer.flipX = x < 0f ? false : true;
+
+        if(y != 0f)
+            animator.SetBool("frontSide", y < 0f);
     }
 }
