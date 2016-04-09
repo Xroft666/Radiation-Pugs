@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
-  peePrefab: {fileID: 155880, guid: b6867ac6fab5c46f6bdf391bdb96c2c8, type: 2}
   isController: 0
   speed: 0.85
   amountOfPee: 100
