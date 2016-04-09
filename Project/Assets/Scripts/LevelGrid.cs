@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public enum PlayerEnum
 {
-    None,
+    None = -1,
     Player1,
     Player2,
     Player3,
@@ -34,8 +34,8 @@ public class LevelGrid : MonoBehaviour
 
     public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
 
-    private int gridResolution = 50;
-    private float scale = 0.1f;
+    public int gridResolution = 750;
+    public float scale = 0.1f;
 
     private Dictionary<Point, GridCell> m_grid = new Dictionary<Point, GridCell>();
     private Dictionary<PlayerEnum, int> cellCounter = new Dictionary<PlayerEnum, int>();
@@ -53,8 +53,7 @@ public class LevelGrid : MonoBehaviour
                
                 GameObject helperGO = new GameObject(point.ToString());
                 helperGO.transform.position = new Vector3(point.x * scale, point.y * scale);
-                m_grid[point].helper = helperGO.AddComponent<GridHelper>();
-               
+                m_grid[point].helper = helperGO.AddComponent<GridHelper>();             
             }
                
         cellCounter[PlayerEnum.Player1] = 0;
