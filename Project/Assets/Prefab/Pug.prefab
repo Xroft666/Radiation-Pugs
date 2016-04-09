@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5088312}
   - 95: {fileID: 9580290}
   - 212: {fileID: 21227972}
+  - 114: {fileID: 11484982}
   m_Layer: 0
   m_Name: Pug
   m_TagString: pug
@@ -98,6 +99,18 @@ MonoBehaviour:
   peeDepletionRate: 20
   peeAdditionRate: 50
   drinking: 0
+--- !u!114 &11484982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!212 &21227972
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,7 +136,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 3cf25534639f54a56ba21c4db9f63c9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

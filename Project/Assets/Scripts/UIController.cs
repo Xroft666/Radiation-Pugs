@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
 
     private void OnAreaChanged(PlayerEnum id, int num)
     {
-        playersCounters[(int)id].text = (num / (float) LevelGrid.Instance.gridResolution).ToString("0.0") + "%";
+		playersCounters[(int)id].text = (num / (float)(LevelGrid.gridResolution)*2).ToString("0.0") + "%";
        
     }
 }
