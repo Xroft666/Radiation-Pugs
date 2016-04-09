@@ -24,7 +24,7 @@ public class Pee : MonoBehaviour {
 			Instantiate(prefab, transform.position, Quaternion.identity);
 			amountOfPee -= peeDepletionRate * Time.deltaTime;
 
-            LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, PlayerEnum(playerNumber - 1));
+            LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, (PlayerEnum)(playerNumber - 1));
 		}
 		else if(Input.GetButton("Joy" + playerNumber + " Pee"))
 		{
