@@ -16,17 +16,14 @@ public class Moving : MonoBehaviour
 		/*
         transform.position += new Vector3(x, y) * Time.deltaTime;
 */
+
 		if(Mathf.Abs(x) > 0.1f || Mathf.Abs(y) > 0.1f)
 		{
 			float direction = Mathf.Rad2Deg * Mathf.Atan2(-x,y);
 
 			transform.eulerAngles = new Vector3(0,0,direction);
 		}
-
-
-		transform.position += transform.up * Time.deltaTime * speed;
-
-        //LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
-
+			
+        LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
     }
 }
