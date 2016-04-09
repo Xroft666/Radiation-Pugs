@@ -130,13 +130,13 @@ public class HighlightsPostEffect : MonoBehaviour
             m_renderBuffer.DrawRenderer( pugsRenderers[i], m_highlightMaterial, 0, 5);
 		}
 
-        for(int i = 0; i < LevelGrid.Instance.takenGridCells.Count; i++)
-        {
-            GridCell cell = LevelGrid.Instance.takenGridCells[i];
-
-            m_renderBuffer.SetGlobalColor("_PugColor", highlightColors[cell.owner]);
-            m_renderBuffer.DrawRenderer( cell.renderer, m_highlightMaterial, 0, 5);
-        }
+        //for(int i = 0; i < LevelGrid.Instance.takenGridCells.Count; i++)
+        //{
+        //    GridCell cell = LevelGrid.Instance.takenGridCells[i];
+        //
+        //    m_renderBuffer.SetGlobalColor("_PugColor", highlightColors[cell.owner]);
+        //    m_renderBuffer.DrawRenderer( cell.renderer, m_highlightMaterial, 0, 5);
+        //}
 
 		RenderTexture.active = rt;
 		Graphics.ExecuteCommandBuffer(m_renderBuffer);

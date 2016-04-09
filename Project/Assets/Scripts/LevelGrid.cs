@@ -93,7 +93,7 @@ public class LevelGrid : MonoBehaviour
             OnCounterChanged(owner, cellCounter[owner]);
         }
 
-        takenGridCells.Add(m_grid[point]);
+        //takenGridCells.Add(m_grid[point]);
 
         m_grid[point].owner = id;
         cellCounter[id]++;
