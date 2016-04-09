@@ -76,7 +76,10 @@ public class LevelGrid : MonoBehaviour
             return;
 
         if(owner != PlayerEnum.None)
+        {
             cellCounter[owner] --;
+            OnCounterChanged(owner, cellCounter[id]);
+        }
 
         m_grid[point].owner = id;
         cellCounter[id]++;
