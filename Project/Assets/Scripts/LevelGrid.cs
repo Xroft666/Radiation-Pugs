@@ -1,0 +1,102 @@
+﻿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public enum PlayerEnum
+{
+    None,
+    Player1,
+    Player2,
+    Player3,
+    Player4
+}
+
+public enum LevelObjectEnum
+{
+    None,
+    Obstacle,
+    WaterBowl
+}
+
+public class GridCell
+{
+    public PlayerEnum owner;
+    public LevelObjectEnum levelObject;
+
+    public GameObject instantiatedObj;
+    public GridHelper helper;
+}
+
+public class LevelGrid : MonoBehaviour 
+{
+    public static LevelGrid Instance;
+
+    public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
+
+    private int gridResolution = 50;
+    private float scale = 0.1f;
+
+    private Dictionary<Point, GridCell> m_grid = new Dictionary<Point, GridCell>();
+    private Dictionary<PlayerEnum, int> cellCounter = new Dictionary<PlayerEnum, int>();
+	
+    public void Awake()
+    {
+        Instance = this;
+
+        for(int i = 0; i < gridResolution; i++)
+            for(int j = 0; j < gridResolution; j++)
+            {
+                Point point = new Point((int) ((i - gridResolution / 2) ), 
+                                        (int) ((j - gridResolution / 2) ));
+                m_grid[point] = new GridCell();
+               
+                GameObject helperGO = new GameObject(point.ToString());
+                helperGO.transform.position = new Vector3(point.x * scale, point.y * scale);
+                m_grid[point].helper = helperGO.AddComponent<GridHelper>();
+               
+            }
+               
+        cellCounter[PlayerEnum.Player1] = 0;
+        cellCounter[PlayerEnum.Player2] = 0;
+        cellCounter[PlayerEnum.Player3] = 0;
+        cellCounter[PlayerEnum.Player4] = 0;
+    }
+
+    public void SetGridOwner(float x, float y, PlayerEnum id)
+    {
+        Point point = new Point((int) (x/scale), (int) (y/scale));
+
+        PlayerEnum owner = m_grid[point].owner;
+
+        if(owner == id)
+            return;
+
+        if(owner != PlayerEnum.None)
+            cellCounter[owner] --;
+
+        m_grid[point].owner = id;
+        cellCounter[id]++;
+
+        Color changeColor = Color.white;
+        switch(id)
+        {
+            case PlayerEnum.Player1:
+                changeColor = Color.red;
+                break;
+            case PlayerEnum.Player2:
+                changeColor = Color.blue;
+                break;
+            case PlayerEnum.Player3:
+                changeColor = Color.yellow;
+                break;
+            case PlayerEnum.Player4:
+                changeColor = Color.black;
+                break;
+        }
+
+        m_grid[point].helper.color = changeColor;
+
+        OnCounterChanged(id, cellCounter[id]);
+    }
+}
