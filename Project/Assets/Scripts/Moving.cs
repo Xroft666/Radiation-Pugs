@@ -10,8 +10,8 @@ public class Moving : MonoBehaviour
 
     void Update()
     {
-        float x = isController ? Input.GetAxis("Joy" + (int)playerID + " Axis1") : Input.GetAxis("Horizontal");
-        float y = isController ? Input.GetAxis("Joy" + (int)playerID + " Axis2") : Input.GetAxis("Vertical");
+		float x = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis1") : Input.GetAxis("Horizontal");
+		float y = isController ? Input.GetAxis("Joy" + ((int)playerID + 1) + " Axis2") : Input.GetAxis("Vertical");
 
 		/*
         transform.position += new Vector3(x, y) * Time.deltaTime;
@@ -23,6 +23,8 @@ public class Moving : MonoBehaviour
 
 			transform.eulerAngles = new Vector3(0,0,direction);
 		}
+
+		transform.position += new Vector3(x, y) * Time.deltaTime * speed;
 			
         LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
     }
