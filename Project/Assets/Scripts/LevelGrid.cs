@@ -39,7 +39,7 @@ public class LevelGrid : MonoBehaviour
     public GameObject peePrefab;
 
     public bool debugMode;
-    public int gridResolution = 750;
+    public static int gridResolution = 50;
     public float scale = 0.1f;
 
     private Dictionary<Point, GridCell> m_grid = new Dictionary<Point, GridCell>();

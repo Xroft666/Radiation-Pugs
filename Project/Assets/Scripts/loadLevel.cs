@@ -5,7 +5,7 @@ public class loadLevel : MonoBehaviour {
 
 	void Update()
 	{
-		if(Input.GetKey(KeyCode.Z) || Input.GetButton("Joy1" + " Pee") || Input.GetButton("Joy2" + " Pee") || Input.GetButton("Joy3" + " Pee") || Input.GetButton("Joy4" + " Pee"))
+		if(Input.GetKeyDown(KeyCode.Z) || Input.GetButtonDown("Joy1" + " Pee") || Input.GetButtonDown("Joy2" + " Pee") || Input.GetButtonDown("Joy3" + " Pee") || Input.GetButtonDown("Joy4" + " Pee"))
 		{
 			LoadStage();
 		}
