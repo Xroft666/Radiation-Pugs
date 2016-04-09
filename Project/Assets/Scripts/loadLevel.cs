@@ -3,10 +3,16 @@ using System.Collections;
 
 public class loadLevel : MonoBehaviour {
 
-	public string levelToLoad;
+	void Update()
+	{
+		if(Input.GetKey(KeyCode.Z))
+		{
+			LoadStage();
+		}
+	}
 
 	public void LoadStage()  {
-		Application.LoadLevel (levelToLoad);
+		Application.LoadLevel (1);
 	}
 
 }
