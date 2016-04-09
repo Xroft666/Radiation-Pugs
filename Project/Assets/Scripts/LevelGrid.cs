@@ -107,7 +107,7 @@ public class LevelGrid : MonoBehaviour
                 break;
         }
 
-        m_grid[point].instantiatedObj = Instantiate(peePrefab, transform.position, Quaternion.identity) as GameObject;
+        m_grid[point].instantiatedObj = Instantiate(peePrefab, new Vector3(x,y), Quaternion.identity) as GameObject;
 
         if(debugMode)
         {
