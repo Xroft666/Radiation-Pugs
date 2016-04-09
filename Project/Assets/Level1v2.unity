@@ -195,6 +195,7 @@ Transform:
   - {fileID: 122655729}
   - {fileID: 201628639}
   - {fileID: 1781468156}
+  - {fileID: 970765605}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!1 &122655727
@@ -207,6 +208,7 @@ GameObject:
   - 4: {fileID: 122655729}
   - 212: {fileID: 122655728}
   - 114: {fileID: 122655730}
+  - 61: {fileID: 122655731}
   m_Layer: 0
   m_Name: Statue
   m_TagString: Untagged
@@ -239,7 +241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 92
+  m_SortingOrder: 218
   m_Sprite: {fileID: 21300000, guid: 93a7ddca7817abd498150f323515022e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -251,7 +253,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122655727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -456.6493, y: -249.66962, z: 0.625}
+  m_LocalPosition: {x: -456.29, y: -250.93, z: 0.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 107181492}
@@ -268,6 +270,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &122655731
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122655727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.005218506, y: -0.1300354}
+  serializedVersion: 2
+  m_Size: {x: 0.1955964, y: 0.16683728}
 --- !u!1 &138720757
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +423,7 @@ GameObject:
   - 4: {fileID: 218004988}
   - 212: {fileID: 218004987}
   - 114: {fileID: 218004989}
+  - 61: {fileID: 218004990}
   m_Layer: 0
   m_Name: Table_desk
   m_TagString: Untagged
@@ -468,6 +485,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &218004990
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218004986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.03, y: 0.53}
 --- !u!1001 &253593069
 Prefab:
   m_ObjectHideFlags: 0
@@ -603,6 +634,7 @@ GameObject:
   - 4: {fileID: 322867875}
   - 212: {fileID: 322867874}
   - 114: {fileID: 322867876}
+  - 61: {fileID: 322867877}
   m_Layer: 0
   m_Name: Table_wood_coffee
   m_TagString: Untagged
@@ -664,6 +696,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &322867877
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322867873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.047271673}
+  serializedVersion: 2
+  m_Size: {x: 0.32700056, y: 0.26366815}
 --- !u!1001 &422970514
 Prefab:
   m_ObjectHideFlags: 0
@@ -774,6 +820,7 @@ GameObject:
   - 4: {fileID: 495865744}
   - 212: {fileID: 495865743}
   - 114: {fileID: 495865745}
+  - 61: {fileID: 495865746}
   m_Layer: 0
   m_Name: Couch_red
   m_TagString: Untagged
@@ -835,6 +882,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &495865746
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495865742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.06931301, y: 0.04620321}
+  serializedVersion: 2
+  m_Size: {x: 0.2714467, y: 0.48522627}
 --- !u!1 &505202500
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +905,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 505202502}
   - 212: {fileID: 505202501}
-  - 114: {fileID: 505202503}
   m_Layer: 0
   m_Name: carpet
   m_TagString: Untagged
@@ -877,7 +937,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -59
+  m_SortingOrder: -399
   m_Sprite: {fileID: 21300000, guid: 7011592f4e2e643a0a25a7e0669d2854, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -894,18 +954,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 107181492}
   m_RootOrder: 9
---- !u!114 &505202503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 505202500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Size: 1
 --- !u!1001 &541086021
 Prefab:
   m_ObjectHideFlags: 0
@@ -993,7 +1041,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: isController
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088312, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088312, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088312, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088312, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088312, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
@@ -1041,6 +1109,48 @@ Transform:
   - {fileID: 1316588833}
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1 &970765604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 970765605}
+  - 61: {fileID: 970765606}
+  m_Layer: 0
+  m_Name: TopCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970765605
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970765604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -459.4, y: -247.46962, z: 0.625}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_Children: []
+  m_Father: {fileID: 107181492}
+  m_RootOrder: 14
+--- !u!61 &970765606
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970765604}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.06729126, y: 0.05506897}
+  serializedVersion: 2
+  m_Size: {x: 8.4981365, y: 0.8899641}
 --- !u!1 &993898017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1309,7 @@ GameObject:
   - 4: {fileID: 1141649338}
   - 212: {fileID: 1141649337}
   - 114: {fileID: 1141649339}
+  - 61: {fileID: 1141649340}
   m_Layer: 0
   m_Name: Statue_wood
   m_TagString: Untagged
@@ -1260,6 +1371,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &1141649340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141649336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.087004736}
+  serializedVersion: 2
+  m_Size: {x: 0.16759393, y: 0.22521436}
 --- !u!1 &1157800701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1395,7 @@ GameObject:
   - 4: {fileID: 1157800703}
   - 212: {fileID: 1157800702}
   - 114: {fileID: 1157800704}
+  - 61: {fileID: 1157800705}
   m_Layer: 0
   m_Name: Sofa_yellow
   m_TagString: Untagged
@@ -1331,6 +1457,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &1157800705
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1157800701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.014567496, y: -0.038838044}
+  serializedVersion: 2
+  m_Size: {x: 0.3268376, y: 0.3305782}
 --- !u!1001 &1233008128
 Prefab:
   m_ObjectHideFlags: 0
@@ -1576,6 +1716,7 @@ GameObject:
   - 4: {fileID: 1347835207}
   - 212: {fileID: 1347835206}
   - 114: {fileID: 1347835208}
+  - 61: {fileID: 1347835209}
   m_Layer: 0
   m_Name: Sculpture_bird
   m_TagString: Untagged
@@ -1637,6 +1778,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &1347835209
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347835205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.0049146335, y: -0.23580647}
+  serializedVersion: 2
+  m_Size: {x: 0.19196405, y: 0.11882253}
 --- !u!1 &1364783909 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100414, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
@@ -1713,6 +1868,7 @@ GameObject:
   - 4: {fileID: 1527213184}
   - 212: {fileID: 1527213183}
   - 114: {fileID: 1527213185}
+  - 61: {fileID: 1527213186}
   m_Layer: 0
   m_Name: Desk_president
   m_TagString: Untagged
@@ -1774,6 +1930,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 2
+--- !u!61 &1527213186
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527213182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.0025503475, y: -0.30333933}
+  serializedVersion: 2
+  m_Size: {x: 0.52148664, y: 0.1797396}
 --- !u!1001 &1533982295
 Prefab:
   m_ObjectHideFlags: 0
@@ -1884,6 +2054,7 @@ GameObject:
   - 4: {fileID: 1616261282}
   - 212: {fileID: 1616261281}
   - 114: {fileID: 1616261283}
+  - 61: {fileID: 1616261284}
   m_Layer: 0
   m_Name: Chair_yellow
   m_TagString: Untagged
@@ -1945,6 +2116,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 1
+--- !u!61 &1616261284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616261280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.0134533085, y: -0.085079916}
+  serializedVersion: 2
+  m_Size: {x: 0.27944526, y: 0.15036401}
 --- !u!1 &1630100427 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100414, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
