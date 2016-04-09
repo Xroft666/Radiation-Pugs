@@ -25,6 +25,8 @@ public class GridCell
     public LevelObjectEnum levelObject;
 
     public GameObject instantiatedObj;
+    public Renderer renderer;
+
     public GridHelper helper;
 }
 
@@ -44,6 +46,7 @@ public class LevelGrid : MonoBehaviour
 
     private Dictionary<Point, GridCell> m_grid = new Dictionary<Point, GridCell>();
 
+    public List<GridCell> takenGridCells = new List<GridCell>();
 	
     public void Awake()
     {
@@ -82,10 +85,15 @@ public class LevelGrid : MonoBehaviour
         if(owner != PlayerEnum.None)
         {
             cellCounter[owner] --;
+
+            m_grid[point].renderer = null;
             Destroy(m_grid[point].instantiatedObj);
+
 
             OnCounterChanged(owner, cellCounter[owner]);
         }
+
+        takenGridCells.Add(m_grid[point]);
 
         m_grid[point].owner = id;
         cellCounter[id]++;
@@ -108,6 +116,7 @@ public class LevelGrid : MonoBehaviour
         }
 
         m_grid[point].instantiatedObj = Instantiate(peePrefab, new Vector3(x,y), Quaternion.identity) as GameObject;
+        m_grid[point].renderer = m_grid[point].instantiatedObj.GetComponent<Renderer>();
 
         if(debugMode)
         {
