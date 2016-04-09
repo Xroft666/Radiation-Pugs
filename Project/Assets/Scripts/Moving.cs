@@ -26,7 +26,7 @@ public class Moving : MonoBehaviour
 
 		transform.position += transform.up * Time.deltaTime * speed;
 
-        LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
+        //LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, playerID);
 
     }
 }

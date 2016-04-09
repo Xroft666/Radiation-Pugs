@@ -21,7 +21,7 @@ public enum LevelObjectEnum
 
 public class GridCell
 {
-    public PlayerEnum owner;
+    public PlayerEnum owner = PlayerEnum.None;
     public LevelObjectEnum levelObject;
 
     public GameObject instantiatedObj;
@@ -34,6 +34,7 @@ public class LevelGrid : MonoBehaviour
 
     public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
 
+    public bool debugMode;
     public int gridResolution = 750;
     public float scale = 0.1f;
 
@@ -44,16 +45,19 @@ public class LevelGrid : MonoBehaviour
     {
         Instance = this;
 
-        for(int i = 0; i < gridResolution; i++)
+        for(int i = 0; i < (int) (1.7f * gridResolution); i++)
             for(int j = 0; j < gridResolution; j++)
             {
-                Point point = new Point((int) ((i - gridResolution / 2) ), 
+                Point point = new Point((int) ((i - 1.7f * gridResolution / 2 ) ), 
                                         (int) ((j - gridResolution / 2) ));
                 m_grid[point] = new GridCell();
                
-                GameObject helperGO = new GameObject(point.ToString());
-                helperGO.transform.position = new Vector3(point.x * scale, point.y * scale);
-                m_grid[point].helper = helperGO.AddComponent<GridHelper>();             
+                if(debugMode)
+                {
+                    GameObject helperGO = new GameObject(point.ToString());
+                    helperGO.transform.position = new Vector3(point.x * scale, point.y * scale);
+                    m_grid[point].helper = helperGO.AddComponent<GridHelper>();     
+                }
             }
                
         cellCounter[PlayerEnum.Player1] = 0;
@@ -94,7 +98,10 @@ public class LevelGrid : MonoBehaviour
                 break;
         }
 
-        m_grid[point].helper.color = changeColor;
+        if(debugMode)
+        {
+            m_grid[point].helper.color = changeColor;
+        }
 
         OnCounterChanged(id, cellCounter[id]);
     }
