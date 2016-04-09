@@ -36,6 +36,8 @@ public class LevelGrid : MonoBehaviour
 
     public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
 
+    public GameObject peePrefab;
+
     public bool debugMode;
     public int gridResolution = 750;
     public float scale = 0.1f;
@@ -80,6 +82,8 @@ public class LevelGrid : MonoBehaviour
         if(owner != PlayerEnum.None)
         {
             cellCounter[owner] --;
+            Destroy(m_grid[point].instantiatedObj);
+
             OnCounterChanged(owner, cellCounter[owner]);
         }
 
@@ -102,6 +106,8 @@ public class LevelGrid : MonoBehaviour
                 changeColor = Color.black;
                 break;
         }
+
+        m_grid[point].instantiatedObj = Instantiate(peePrefab, transform.position, Quaternion.identity) as GameObject;
 
         if(debugMode)
         {

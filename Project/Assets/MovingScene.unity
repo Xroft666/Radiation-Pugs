@@ -148,6 +148,10 @@ Prefab:
       propertyPath: playerID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: isController
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
   m_IsPrefabParent: 0
@@ -423,6 +427,10 @@ Prefab:
       propertyPath: playerID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: isController
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
   m_IsPrefabParent: 0
@@ -617,6 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302430d48fdb3447e85a799e0a201665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  peePrefab: {fileID: 155880, guid: b6867ac6fab5c46f6bdf391bdb96c2c8, type: 2}
   debugMode: 0
   gridResolution: 50
   scale: 0.1
@@ -768,6 +777,10 @@ Prefab:
     - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: playerID
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: isController
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e6d92b414b24c368edb68053e74390, type: 2}

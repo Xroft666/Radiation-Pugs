@@ -15,14 +15,14 @@ public class FillUp : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.transform.tag == "pug")
 		{
-			other.GetComponent<Pee>().drinking = true;
+			other.GetComponent<PugController>().drinking = true;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.transform.tag == "pug")
 		{
-			other.GetComponent<Pee>().drinking = false;
+            other.GetComponent<PugController>().drinking = false;
 		}
 	}
 }
