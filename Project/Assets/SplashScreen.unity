@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24e3e08d31f09848a9e3f5fc2f1ee2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelToLoad: '"MovingScene"'
 --- !u!1 &774754226
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24e3e08d31f09848a9e3f5fc2f1ee2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelToLoad: 
 --- !u!1 &846790465
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +585,7 @@ RectTransform:
   m_GameObject: {fileID: 1284607331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.241738, y: 2.2417393, z: 2.2417393}
+  m_LocalScale: {x: 2.0555139, y: 2.055515, z: 2.055515}
   m_Children: []
   m_Father: {fileID: 774754230}
   m_RootOrder: 0
