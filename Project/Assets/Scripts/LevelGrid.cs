@@ -32,6 +32,8 @@ public class LevelGrid : MonoBehaviour
 {
     public static LevelGrid Instance;
 
+    public static Dictionary<PlayerEnum, int> cellCounter = new Dictionary<PlayerEnum, int>();
+
     public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
 
     public bool debugMode;
@@ -39,7 +41,7 @@ public class LevelGrid : MonoBehaviour
     public float scale = 0.1f;
 
     private Dictionary<Point, GridCell> m_grid = new Dictionary<Point, GridCell>();
-    private Dictionary<PlayerEnum, int> cellCounter = new Dictionary<PlayerEnum, int>();
+
 	
     public void Awake()
     {
