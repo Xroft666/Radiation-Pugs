@@ -14,7 +14,9 @@ public class UIController : MonoBehaviour
 
     private void OnAreaChanged(PlayerEnum id, float num)
     {
-		playersCounters[(int)id].text = "" + players[(int)id].score;
+        playersCounters[(int)id].text = players[(int)id].score.ToString("0");
        
     }
+
+
 }
