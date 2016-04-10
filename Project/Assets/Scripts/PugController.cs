@@ -75,7 +75,7 @@ public class PugController : MonoBehaviour
         if(isHavingShoe && shoePivot.childCount == 0)
             isHavingShoe = false;
 
-		bool isPickingUp = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " PickUp") : Input.GetKeyDown(KeyCode.E);
+		bool isPickingUp = isController ? Input.GetButtonDown("Joy" + ((int)playerID + 1) + " PickUp") : Input.GetKeyDown(KeyCode.E);
 
 		if(isPickingUp)
         {
