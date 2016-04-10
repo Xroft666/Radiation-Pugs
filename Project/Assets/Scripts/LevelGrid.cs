@@ -131,4 +131,9 @@ public class LevelGrid : MonoBehaviour
 
         OnCounterChanged(id, pointsCounter[id]);
     }
+
+    public void UpdateScore(PlayerEnum id, float score)
+    {
+        OnCounterChanged(id, score);
+    }
 }

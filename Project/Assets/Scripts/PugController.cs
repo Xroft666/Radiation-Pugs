@@ -20,7 +20,7 @@ public class PugController : MonoBehaviour
 
     public Transform shoePivot;
 
-	public int score = 0;
+	public float score = 0;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -91,7 +91,9 @@ public class PugController : MonoBehaviour
         // points for having the shoe
         if(isHavingShoe)
         {
-            LevelGrid.pointsCounter[playerID] += Time.deltaTime;
+            score += Time.deltaTime * 5f;
+
+            LevelGrid.Instance.UpdateScore(playerID, score);
         }
 
 
