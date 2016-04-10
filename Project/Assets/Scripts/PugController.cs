@@ -13,6 +13,8 @@ public class PugController : MonoBehaviour
     public float peeAdditionRate = 50f;
 	public float peePoints = 2;
 
+	public AudioClip barks;
+
     [HideInInspector]
     public bool drinking = false;
     [HideInInspector]
@@ -135,6 +137,14 @@ public class PugController : MonoBehaviour
         {
             amountOfPee = 100;
         }
+
+		bool isBarking = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Pee") : Input.GetKeyDown(KeyCode.X);
+
+		if(isBarking)
+		{
+			transform.GetComponent<AudioSource>().PlayOneShot(barks);
+		}
+
 
     }
 
