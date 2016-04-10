@@ -11,6 +11,7 @@ public class PugController : MonoBehaviour
     public float amountOfPee = 100;
     public float peeDepletionRate = 20f;
     public float peeAdditionRate = 50f;
+	public float peePoints = 2;
 
     [HideInInspector]
     public bool drinking = false;
@@ -18,6 +19,8 @@ public class PugController : MonoBehaviour
     public bool isHavingShoe = false;
 
     public Transform shoePivot;
+
+	public int score = 0;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -53,11 +56,11 @@ public class PugController : MonoBehaviour
         else
         if(currentCell.owner == playerID)
         {
-            modifier = 2f;
+            modifier = 1.4f;
         }
         else
         {
-            modifier = 0.5f;
+            modifier = 0.9f;
         }
 
         transform.position += velocity * modifier * speed * Time.deltaTime;
@@ -117,6 +120,7 @@ public class PugController : MonoBehaviour
             amountOfPee -= peeDepletionRate * Time.deltaTime;
 
             LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, (PlayerEnum) playerID);
+			score += (int)peePoints;
         }
         else if(isPeeing)
         {
@@ -125,7 +129,7 @@ public class PugController : MonoBehaviour
 
         if(drinking && amountOfPee < 100)
         {
-            amountOfPee += peeAdditionRate * Time.deltaTime;
+			amountOfPee += peeAdditionRate * Time.deltaTime;
         }
         else if(drinking)
         {
