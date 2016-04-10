@@ -146,7 +146,7 @@ public class PugController : MonoBehaviour
             amountOfPee = 100;
         }
 
-		bool isBarking = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Bark") : Input.GetKeyDown(KeyCode.X);
+		bool isBarking = isController ? Input.GetButtonDown("Joy" + ((int)playerID + 1) + " Bark") : Input.GetKeyDown(KeyCode.X);
 
 		if(isBarking)
 		{
