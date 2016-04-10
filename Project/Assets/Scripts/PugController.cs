@@ -97,7 +97,7 @@ public class PugController : MonoBehaviour
         // points for having the shoe
         if(isHavingShoe)
         {
-            score += Time.deltaTime * 5f;
+            score += Time.deltaTime * 10f;
 
             LevelGrid.Instance.UpdateScore(playerID, score);
         }
