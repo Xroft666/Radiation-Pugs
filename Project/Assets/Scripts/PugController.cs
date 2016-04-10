@@ -26,7 +26,7 @@ public class PugController : MonoBehaviour
 
     public Transform shoePivot;
 
-	public float score = 0;
+	//public float score = 0;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -99,9 +99,9 @@ public class PugController : MonoBehaviour
         // points for having the shoe
         if(isHavingShoe)
         {
-            score += Time.deltaTime * 10f;
-
-            LevelGrid.Instance.UpdateScore(playerID, score);
+            //score += Time.deltaTime * 10f;
+            LevelGrid.pointsCounter[playerID] += Time.deltaTime * 10f;
+            LevelGrid.Instance.UpdateScore(playerID, LevelGrid.pointsCounter[playerID]);
         }
 
 
@@ -130,7 +130,7 @@ public class PugController : MonoBehaviour
             amountOfPee -= peeDepletionRate * Time.deltaTime;
 
             LevelGrid.Instance.SetGridOwner(transform.position.x, transform.position.y, (PlayerEnum) playerID);
-			score += (int)peePoints;
+			//score += (int)peePoints;
         }
         else if(isPeeing)
         {

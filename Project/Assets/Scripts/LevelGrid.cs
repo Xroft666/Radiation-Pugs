@@ -90,7 +90,7 @@ public class LevelGrid : MonoBehaviour
 
         if(owner != PlayerEnum.None)
         {
-            pointsCounter[owner] -= 1f;
+            pointsCounter[owner] -= 2f;
 
             m_grid[point].renderer = null;
             Destroy(m_grid[point].instantiatedObj);
@@ -102,7 +102,7 @@ public class LevelGrid : MonoBehaviour
         //takenGridCells.Add(m_grid[point]);
 
         m_grid[point].owner = id;
-        pointsCounter[id] += 1f;
+        pointsCounter[id] += 2f;
 
         Color changeColor = Color.white;
         switch(id)

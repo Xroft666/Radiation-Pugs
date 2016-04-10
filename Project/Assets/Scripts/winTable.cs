@@ -19,7 +19,7 @@ public class winTable : MonoBehaviour {
 	void Update () {
 		foreach(KeyValuePair<PlayerEnum, float> cellHeight in LevelGrid.pointsCounter)
 		{
-			float procentage = ((cellHeight.Value / (float)(LevelGrid.gridResolution))*2)*10;
+			float procentage = cellHeight.Value / 6f;
 			Transform Bar = transform.GetChild((int)cellHeight.Key);
 
 			if(Bar.GetComponent<RectTransform>().sizeDelta.y < procentage)
