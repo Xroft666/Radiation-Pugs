@@ -64,21 +64,23 @@ public class PugController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            if(shoeAvailable != null)
+            if(shoeAvailable != null && !isHavingShoe)
             {
-                isHavingShoe = !isHavingShoe;
+                shoeAvailable.transform.parent = shoePivot;
+                shoePivot.transform.localPosition = Vector3.zero;
 
-                if(isHavingShoe)
-                {
-                    shoeAvailable.transform.parent = shoePivot;
-                    shoePivot.transform.localPosition = Vector3.zero;
-                }
-                else
-                {
-                    shoeAvailable.transform.parent = null;
-                }
+                isHavingShoe = true;
+            }
+            else
+            if(isHavingShoe)
+            {
+                shoePivot.GetChild(0).transform.parent = null;
+
+                isHavingShoe = false;
             }
         }
+
+
 
         Vector3 shoeLocalPos = shoePivot.transform.localPosition;
         if(x != 0f)
