@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PugController : MonoBehaviour 
 {
@@ -12,6 +13,8 @@ public class PugController : MonoBehaviour
     public float peeDepletionRate = 20f;
     public float peeAdditionRate = 50f;
 	public float peePoints = 2;
+
+	public string[] pugQuotes;
 
 	public AudioClip barks;
 
@@ -145,6 +148,15 @@ public class PugController : MonoBehaviour
 		if(isBarking)
 		{
 			transform.GetComponent<AudioSource>().PlayOneShot(barks);
+
+			string pugQuote = pugQuotes[Random.Range(0, pugQuotes.Length)];
+
+			while(transform.GetChild(1).GetChild(0).GetComponent<Text>().text == pugQuote)
+			{
+				pugQuote = pugQuotes[Random.Range(0, pugQuotes.Length)];
+			}
+
+			transform.GetChild(1).GetChild(0).GetComponent<Text>().text = pugQuote;
 		}
 
 
