@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
         LevelGrid.Instance.OnCounterChanged += OnAreaChanged;
     }
 
-    private void OnAreaChanged(PlayerEnum id, int num)
+    private void OnAreaChanged(PlayerEnum id, float num)
     {
 		playersCounters[(int)id].text = "" + players[(int)id].score;
        

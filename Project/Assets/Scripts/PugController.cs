@@ -91,7 +91,7 @@ public class PugController : MonoBehaviour
         // points for having the shoe
         if(isHavingShoe)
         {
-            LevelGrid.pointsCounter += Time.deltaTime;
+            LevelGrid.pointsCounter[playerID] += Time.deltaTime;
         }
 
 
