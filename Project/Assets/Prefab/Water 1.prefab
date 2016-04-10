@@ -9,6 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 424790}
   - 212: {fileID: 21299442}
+  - 114: {fileID: 11405228}
+  - 61: {fileID: 6110228}
+  - 114: {fileID: 11423188}
   m_Layer: 0
   m_Name: Water 1
   m_TagString: Untagged
@@ -28,6 +31,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6110228
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102946}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.35, y: 0.35}
+--- !u!114 &11405228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a7acd30950941b8a5988c99c24f696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11423188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 0.4
 --- !u!212 &21299442
 SpriteRenderer:
   m_ObjectHideFlags: 1
