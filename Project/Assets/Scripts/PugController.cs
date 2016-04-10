@@ -75,7 +75,9 @@ public class PugController : MonoBehaviour
         if(isHavingShoe && shoePivot.childCount == 0)
             isHavingShoe = false;
 
-        if(Input.GetKeyDown(KeyCode.E))
+		bool isPickingUp = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " PickUp") : Input.GetKeyDown(KeyCode.E);
+
+		if(isPickingUp)
         {
             if(shoeAvailable != null && !isHavingShoe)
             {
@@ -144,7 +146,7 @@ public class PugController : MonoBehaviour
             amountOfPee = 100;
         }
 
-		bool isBarking = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Pee") : Input.GetKeyDown(KeyCode.X);
+		bool isBarking = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Bark") : Input.GetKeyDown(KeyCode.X);
 
 		if(isBarking)
 		{
