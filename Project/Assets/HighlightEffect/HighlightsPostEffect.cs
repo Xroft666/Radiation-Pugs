@@ -89,6 +89,7 @@ public class HighlightsPostEffect : MonoBehaviour
 		//SetOccluderObjects();
 		
 		m_blur = gameObject.AddComponent<BlurOptimized>();
+        m_blur.blurShader = Shader.Find("Hidden/FastBlur");
 		m_blur.enabled = false;
 
 		//GameObject[] occludees = GameObject.FindGameObjectsWithTag(m_occludeesTag);
