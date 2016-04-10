@@ -884,6 +884,7 @@ GameObject:
   - 4: {fileID: 438050658}
   - 212: {fileID: 438050657}
   - 61: {fileID: 438050656}
+  - 114: {fileID: 438050659}
   m_Layer: 0
   m_Name: Desk_president_w_chair
   m_TagString: Untagged
@@ -930,7 +931,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 31
   m_Sprite: {fileID: 21300000, guid: 42fa52d033fe20c4c854573a3c4da312, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -947,6 +948,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 107181492}
   m_RootOrder: 16
+--- !u!114 &438050659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438050655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 2
 --- !u!1 &439006938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1040,10 @@ Prefab:
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417218, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
+      propertyPath: isController
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
@@ -1309,6 +1326,7 @@ GameObject:
   - 4: {fileID: 1052437902}
   - 212: {fileID: 1052437901}
   - 61: {fileID: 1052437903}
+  - 114: {fileID: 1052437904}
   m_Layer: 0
   m_Name: sofa_1
   m_TagString: Untagged
@@ -1341,7 +1359,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -29
   m_Sprite: {fileID: 21300000, guid: 8d0f4425350d0384a84239b9dde58cb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1372,6 +1390,18 @@ BoxCollider2D:
   m_Offset: {x: 0.00001013279, y: -0.03}
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.25}
+--- !u!114 &1052437904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1052437900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1 &1125394301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1537,7 @@ GameObject:
   - 4: {fileID: 1143403698}
   - 212: {fileID: 1143403697}
   - 61: {fileID: 1143403699}
+  - 114: {fileID: 1143403700}
   m_Layer: 0
   m_Name: sofa_2
   m_TagString: Untagged
@@ -1539,7 +1570,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -27
   m_Sprite: {fileID: 21300000, guid: fa055e09237f559438028ef7cd8015c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1570,6 +1601,18 @@ BoxCollider2D:
   m_Offset: {x: -0.05, y: -0.01}
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.28}
+--- !u!114 &1143403700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143403696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1 &1157800701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1709,7 @@ GameObject:
   - 4: {fileID: 1167689336}
   - 212: {fileID: 1167689335}
   - 61: {fileID: 1167689337}
+  - 114: {fileID: 1167689338}
   m_Layer: 0
   m_Name: lamp_1
   m_TagString: Untagged
@@ -1698,7 +1742,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 28
   m_Sprite: {fileID: 21300000, guid: 8b27f335be7ad4842ae6fffd8c2b7ca1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1729,6 +1773,18 @@ BoxCollider2D:
   m_Offset: {x: -0.02, y: -0.09}
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.39}
+--- !u!114 &1167689338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167689334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1 &1179905950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1795,7 @@ GameObject:
   - 4: {fileID: 1179905952}
   - 212: {fileID: 1179905951}
   - 61: {fileID: 1179905953}
+  - 114: {fileID: 1179905954}
   m_Layer: 0
   m_Name: vase_1
   m_TagString: Untagged
@@ -1771,7 +1828,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 248
   m_Sprite: {fileID: 21300000, guid: 9b94c877079aa1544966365286cbf47d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1802,6 +1859,18 @@ BoxCollider2D:
   m_Offset: {x: 0.05, y: 0.06}
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.28}
+--- !u!114 &1179905954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1179905950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1001 &1233008128
 Prefab:
   m_ObjectHideFlags: 0
@@ -1811,11 +1880,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2392,6 +2461,7 @@ GameObject:
   - 4: {fileID: 1608662937}
   - 212: {fileID: 1608662936}
   - 61: {fileID: 1608662935}
+  - 114: {fileID: 1608662938}
   m_Layer: 0
   m_Name: cupboard_1
   m_TagString: Untagged
@@ -2438,7 +2508,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -106
   m_Sprite: {fileID: 21300000, guid: b0b25bc6896bcdd4c8a35d99a3dc5301, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2455,6 +2525,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 107181492}
   m_RootOrder: 11
+--- !u!114 &1608662938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608662934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1 &1616261280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2655,7 @@ GameObject:
   - 4: {fileID: 1708452977}
   - 212: {fileID: 1708452978}
   - 61: {fileID: 1708452979}
+  - 114: {fileID: 1708452980}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -2617,7 +2700,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -67
   m_Sprite: {fileID: 21300000, guid: a38bff61d1a36994097c07016f2a23e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2636,6 +2719,18 @@ BoxCollider2D:
   m_Offset: {x: 0.0000052452087, y: -0.000004172325}
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.21}
+--- !u!114 &1708452980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708452976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495c134f41c147df9cd1bf405971b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 1
 --- !u!1 &1781468154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,11 +3038,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.928
       objectReference: {fileID: 0}
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 458646, guid: 07e6d92b414b24c368edb68053e74390, type: 2}
       propertyPath: m_LocalPosition.z
