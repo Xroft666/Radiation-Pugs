@@ -62,6 +62,10 @@ public class PugController : MonoBehaviour
 
         transform.position += velocity * modifier * speed * Time.deltaTime;
 
+        // release of some one else taken the shoe
+        if(isHavingShoe && shoePivot.childCount == 0)
+            isHavingShoe = false;
+
         if(Input.GetKeyDown(KeyCode.E))
         {
             if(shoeAvailable != null && !isHavingShoe)
@@ -70,6 +74,7 @@ public class PugController : MonoBehaviour
                 shoePivot.transform.localPosition = Vector3.zero;
 
                 isHavingShoe = true;
+
             }
             else
             if(isHavingShoe)
@@ -80,6 +85,11 @@ public class PugController : MonoBehaviour
             }
         }
 
+        // points for having the shoe
+        if(isHavingShoe)
+        {
+            LevelGrid.pointsCounter += Time.deltaTime;
+        }
 
 
         Vector3 shoeLocalPos = shoePivot.transform.localPosition;

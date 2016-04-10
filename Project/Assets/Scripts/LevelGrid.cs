@@ -34,7 +34,7 @@ public class LevelGrid : MonoBehaviour
 {
     public static LevelGrid Instance;
 
-    public static Dictionary<PlayerEnum, int> cellCounter = new Dictionary<PlayerEnum, int>();
+    public static Dictionary<PlayerEnum, float> cellCounter = new Dictionary<PlayerEnum, int>();
 
     public event Action<PlayerEnum, int> OnCounterChanged = (PlayerEnum id, int count) => {};
 
@@ -90,7 +90,7 @@ public class LevelGrid : MonoBehaviour
 
         if(owner != PlayerEnum.None)
         {
-            cellCounter[owner] --;
+            cellCounter[owner] -= 1f;
 
             m_grid[point].renderer = null;
             Destroy(m_grid[point].instantiatedObj);
@@ -102,7 +102,7 @@ public class LevelGrid : MonoBehaviour
         //takenGridCells.Add(m_grid[point]);
 
         m_grid[point].owner = id;
-        cellCounter[id]++;
+        cellCounter[id] += 1f;
 
         Color changeColor = Color.white;
         switch(id)

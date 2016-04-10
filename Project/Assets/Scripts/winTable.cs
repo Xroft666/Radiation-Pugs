@@ -17,7 +17,7 @@ public class winTable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		foreach(KeyValuePair<PlayerEnum, int> cellHeight in LevelGrid.cellCounter)
+		foreach(KeyValuePair<PlayerEnum, int> cellHeight in LevelGrid.pointsCounter)
 		{
 			float procentage = ((cellHeight.Value / (float)(LevelGrid.gridResolution))*2)*10;
 			Transform Bar = transform.GetChild((int)cellHeight.Key);
