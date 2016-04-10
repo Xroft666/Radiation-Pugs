@@ -14,9 +14,15 @@ public class PugController : MonoBehaviour
 
     [HideInInspector]
     public bool drinking = false;
+    [HideInInspector]
+    public bool isHavingShoe = false;
+
+    public Transform shoePivot;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+
+    private GameObject shoeAvailable;
 
     void Awake()
     {
@@ -56,14 +62,40 @@ public class PugController : MonoBehaviour
 
         transform.position += velocity * modifier * speed * Time.deltaTime;
 
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(shoeAvailable != null)
+            {
+                isHavingShoe = !isHavingShoe;
 
+                if(isHavingShoe)
+                {
+                    shoeAvailable.transform.parent = shoePivot;
+                    shoePivot.transform.localPosition = Vector3.zero;
+                }
+                else
+                {
+                    shoeAvailable.transform.parent = null;
+                }
+            }
+        }
 
-        
+        Vector3 shoeLocalPos = shoePivot.transform.localPosition;
         if(x != 0f)
+        {
             spriteRenderer.flipX = x < 0f ? false : true;
+            shoeLocalPos.x = x < 0f ? -0.04f : 0.15f;
+
+        }
         
         if(y != 0f)
+        {
             animator.SetBool("frontSide", y < 0f);
+            shoeLocalPos.y = y < 0f ? -0.05f : 0.05f;
+            shoeLocalPos.z = y < 0f ? -1f : 1f;
+        }
+
+        shoePivot.transform.localPosition = shoeLocalPos;
 
         bool isPeeing = isController ? Input.GetButton("Joy" + ((int)playerID + 1) + " Pee") : Input.GetKey(KeyCode.Z);
         animator.SetBool("peeing", isPeeing);
@@ -88,5 +120,31 @@ public class PugController : MonoBehaviour
             amountOfPee = 100;
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        switch(other.transform.tag)
+        {
+            case "water":
+                drinking = true;
+                break;
+            case "shoe":
+                shoeAvailable = other.gameObject;
+                break;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        switch(other.transform.tag)
+        {
+            case "water":
+                drinking = false;
+                break;
+            case "shoe":
+                shoeAvailable = null;
+                break;
+        }
     }
 }
