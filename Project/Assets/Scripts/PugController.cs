@@ -15,6 +15,7 @@ public class PugController : MonoBehaviour
 	public float peePoints = 2;
 
 	public string[] pugQuotes;
+	public float pugQuoteCountdown = 0;
 
 	public AudioClip barks;
 
@@ -157,7 +158,20 @@ public class PugController : MonoBehaviour
 			}
 
 			transform.GetChild(1).GetChild(0).GetComponent<Text>().text = pugQuote;
+
+			pugQuoteCountdown = 1.2f;
 		}
+
+		if(pugQuoteCountdown > 0)
+		{
+			pugQuoteCountdown -= Time.deltaTime;
+		}
+		else if(pugQuoteCountdown <= 0)
+		{
+			pugQuoteCountdown = 0;
+			transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "";
+		}
+
 
 
     }

@@ -245,6 +245,8 @@ MonoBehaviour:
   - Pee-Sports!
   - Voouf!
   - What the Pug!
+  - 2Pug
+  pugQuoteCountdown: 0
   barks: {fileID: 8300000, guid: 660d9fcb6197c4a06a66e76dddf3c748, type: 3}
   drinking: 0
   isHavingShoe: 0
